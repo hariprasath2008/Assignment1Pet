@@ -18,7 +18,7 @@ namespace PetApp
 
 
             Pet pet = new Pet(petType, petName);
-            Console.WriteLine($"Welcome, {petName} the {petType}!");
+            Console.WriteLine($"Welcome, {petName} the {getPetType(petType)}!");
 
 
             Console.WriteLine("\nInstructions:");
@@ -28,8 +28,8 @@ namespace PetApp
             Console.WriteLine("4. Check pet status");
             Console.WriteLine("5. Exit the game.");
 
-            bool running = true;
-            while (running)
+            bool loopContinue = true;
+            while (loopContinue)
             {
                 Console.WriteLine("What would you like to do? ");
                 string action = Console.ReadLine().ToLower();
@@ -49,7 +49,7 @@ namespace PetApp
                         pet.Status();
                         break;
                     case 5:
-                        running = false;
+                        loopContinue = false;
                         break;
                     default:
                         Console.WriteLine("Invalid action.Please choose any one option from(1-5).");

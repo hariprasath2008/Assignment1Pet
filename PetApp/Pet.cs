@@ -88,7 +88,7 @@
             {
                 Console.WriteLine($"{Name} is very hungry!!!");
             }
-            if (happiness <= 4)
+            if (happiness <= 5)
             {
                 Console.WriteLine($"{Name} is very unhappy!!!");
             }
