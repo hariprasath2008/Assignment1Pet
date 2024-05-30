@@ -75,10 +75,25 @@
             if (hunger > 10)
             {
                 hunger = 10;
+            }else if(hunger < 0)
+            {
+                hunger = 0;
             }
-            if (happiness < 0)
+            if (happiness > 10)
+            {
+                happiness = 10;
+            }
+            else if (happiness < 0)
             {
                 happiness = 0;
+            }
+            if (health > 10)
+            {
+                health = 10;
+            }
+            else if (health < 0)
+            {
+                health = 0;
             }
         }
 
