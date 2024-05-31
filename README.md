@@ -4,7 +4,7 @@
 This is a simple C# application that allows users to take care of a virtual pet, choosing among a cat, dog, or rabbit. The user can perform various actions to maintain their pet's wellbeing, ensuring it remains happy and healthy.
 
 ### Explanation Video
-For a demonstration of the Virtual Pet Application, please watch [this video](https://youtu.be/0bppzY0XGns?si=PVVX-ZwbSMwwO5n6).
+For a demonstration of the Virtual Pet Application, please watch [this video](https://youtu.be/nQM9F6qfzNQ).
 
 ## Detailed Project Features
 
