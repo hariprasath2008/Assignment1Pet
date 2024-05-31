@@ -6,11 +6,26 @@ namespace PetApp
         static void Main(string[] args)
         {
             Console.WriteLine("!!Welcome to the Virtual Pet World!!");
-            Console.WriteLine("Select your pet from the list:");
-            Console.WriteLine("1.Cat");
-            Console.WriteLine("2.Dog");
-            Console.WriteLine("3.Rabbit");
-            string petType = Console.ReadLine();
+            string petType = "";
+
+            bool selection = true;
+            while (selection)
+            {
+                Console.WriteLine("Select your pet from the list:");
+                Console.WriteLine("1.Cat");
+                Console.WriteLine("2.Dog");
+                Console.WriteLine("3.Rabbit");
+                petType = Console.ReadLine();
+                if (petType.Equals("1") || petType.Equals("2") || petType.Equals("3"))
+                {
+                    selection=false;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Selection");
+                    selection = true;
+                }
+            }
 
             Console.Write("You have chosen a wonderful " + getPetType(petType) + ".Give it a name:");
             string petName = Console.ReadLine();
@@ -34,28 +49,30 @@ namespace PetApp
                 Console.WriteLine("What would you like to do? ");
                 string action = Console.ReadLine().ToLower();
 
-                switch (int.Parse(action))
+                switch (action)
                 {
-                    case 1:
+                    case "1":
                         pet.Feed();
+                        pet.TimePasses();
                         break;
-                    case 2:
+                    case "2":
                         pet.Play();
+                        pet.TimePasses();
                         break;
-                    case 3:
+                    case "3":
                         pet.Rest();
+                        pet.TimePasses();
                         break;
-                    case 4:
+                    case "4":
                         pet.Status();
                         break;
-                    case 5:
+                    case "5":
                         loopContinue = false;
                         break;
                     default:
                         Console.WriteLine("Invalid action.Please choose any one option from(1-5).");
                         break;
                 }
-                pet.TimePasses();
                 pet.CheckCriticalStatus();
             }
 
